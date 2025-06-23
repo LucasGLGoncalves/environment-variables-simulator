@@ -1,0 +1,13 @@
+services:
+  app:
+    image: rukasu/environment-variables-simulator:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: env-sim
+    ports:
+      - "3000:3000"
+    environment:
+      - APP_NAME=aplicação top
+      - APP_VERSION=2.5
+      - APP_AUTHOR=lukita da galela
